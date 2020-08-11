@@ -2,8 +2,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { LocalDataProvider, GridView } from 'realgrid';
-import Button from '@material-ui/core/Button';
+import { LocalDataProvider, GridView, ValueType } from 'realgrid';
 import { BlockComponentProps } from '../types';
 
 const useStyles = makeStyles(() => ({
@@ -57,30 +56,30 @@ const data = [
 const fields = [
   {
     fieldName: 'KorName',
-    dataType: 'text',
+    dataType: ValueType.TEXT,
   },
   {
     fieldName: 'SexLabel',
-    dataType: 'text',
+    dataType: ValueType.TEXT,
   },
   {
     fieldName: 'Age',
-    dataType: 'number',
+    dataType: ValueType.NUMBER,
   },
   {
     fieldName: 'Phone',
-    dataType: 'text',
+    dataType: ValueType.TEXT,
   },
   {
     fieldName: 'StartDate',
-    dataType: 'datetime',
+    dataType: ValueType.DATETIME,
     datetimeFormat: 'yyyy-MM-dd',
     amText: '오전',
     pmText: '오후',
   },
   {
     fieldName: 'EndDate',
-    dataType: 'datetime',
+    dataType: ValueType.DATETIME,
     datetimeFormat: 'yyyy-MM-dd',
     amText: '오전',
     pmText: '오후',
